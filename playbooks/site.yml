@@ -1,0 +1,6 @@
+- name: Setup and Deploy Application
+  hosts: webservers
+  become: yes
+  roles:
+    - common
+    - docker_app

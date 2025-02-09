@@ -1,0 +1,5 @@
+- name: System Setup - Install Packages and Docker
+  hosts: webservers
+  become: yes
+  roles:
+    - common

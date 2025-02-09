@@ -1,0 +1,14 @@
+---
+- name: Pull the latest Nginx Docker image
+  docker_image:
+    name: nginx
+    source: pull
+
+- name: Run the Nginx container
+  docker_container:
+    name: sample_app
+    image: nginx:latest
+    state: started
+    restart_policy: always
+    published_ports:
+      - "80:80"

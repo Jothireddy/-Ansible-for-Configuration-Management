@@ -1,0 +1,5 @@
+- name: Deploy Dockerized Application
+  hosts: webservers
+  become: yes
+  roles:
+    - docker_app
